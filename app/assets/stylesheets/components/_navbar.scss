@@ -1,4 +1,4 @@
-.navbar {
+.nav {
   padding: 55px 0;
   position: relative;
   margin-bottom: 20px;
@@ -35,7 +35,7 @@
 }
 
 @media screen and (max-width: 976px) {
-  .navbar--blob {
+  .nav--blob {
     width: 50%;
     top: 0;
     left: 513px;
@@ -55,7 +55,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  .navbar {
+  .nav {
     padding: 8px;
     &--blob {
       display: none;
