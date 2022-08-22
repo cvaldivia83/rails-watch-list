@@ -1,1 +1,22 @@
-// Specific CSS for your home-page
+.left {
+  width: 50%;
+}
+
+.hero {
+  position: relative;
+}
+
+.orange--blob {
+  position: absolute;
+  width: 17%;
+  z-index: -5;
+  bottom: -150px;
+}
+
+.yellow--blob {
+  position: absolute;
+  z-index: -5;
+  width: 25%;
+  left: 750px;
+  top: 120px;
+}

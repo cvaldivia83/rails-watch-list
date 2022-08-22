@@ -1,12 +1,72 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar {
+  padding: 55px;
+  position: relative;
+  margin-bottom: 20px;
+  &--blob {
+    width: 42%;
+    position: absolute;
+    z-index: -3;
+    top: -3px;
+    left: 593px;
+  }
+  &--sandwich {
+    display: none;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.list--inline {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  left: 480px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.list--item {
+  display: inline-block;
+  margin: 0 50px;
+}
+
+.list--link {
+  text-decoration: none;
+  color: $text-color;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 976px) {
+  .navbar--blob {
+    width: 50%;
+    top: 0;
+    left: 513px;
+  }
+  .list--item {
+    margin: 0 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list--inline {
+    left: 480px;
+  }
+  .list--item {
+    margin: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .navbar {
+    padding: 8px;
+    &--blob {
+      display: none;
+    }
+    &--sandwich {
+      display: initial;
+      width: 10%;
+      margin: 0 90%;
+    }
+  }
+  .list--inline {
+    display: none;
+  }
 }

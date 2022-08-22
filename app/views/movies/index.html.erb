@@ -1,0 +1,32 @@
+<div class="container movie--list">
+  <%= image_tag("https://res.cloudinary.com/rent-an-instrument/image/upload/v1640895280/left_blue_blob_nh1ywj.svg", class: "grey--blob") %>
+
+  <%= image_tag("https://res.cloudinary.com/rent-an-instrument/image/upload/v1640895280/right_gold_blob_wvfixj.svg", class: "gold--blob") %>
+
+  <%= image_tag("https://res.cloudinary.com/rent-an-instrument/image/upload/v1640895280/light_yellow_blob_cy3wrj.svg", class: "yellow--blob_movie_index") %>
+
+  <%= image_tag("https://res.cloudinary.com/rent-an-instrument/image/upload/v1640895280/left_orange_blob_ffqzsn.svg", class: "orange--blob_movie_index") %>
+
+  <h1 class="text-center mb-6 fw-bolder display-3  mt-7">Movies</h1>
+
+  <div class="movie--cards d-flex flex-wrap justify-content-evenly">
+    <% @movies.each do |movie| %>
+    <%= link_to movie_path(movie), class: "movie--link" do  %>
+      <div class="card m-1 movie--card">
+        <div class="movie--img" style="background-image: url(<%= movie.poster_url %>)"></div>
+        <div class="movie--text ms-2 mt-2 p-1">
+          <h2 class="fw-bold fs-7 movie--title"><%= movie.title %></h2>
+          <p class="movie--tagline fw-light mb-1"><%= movie.tagline[0..46] %><%= movie.tagline.length > 46 ? " ..." : '' %></p>
+        </div>
+        <div class="rating">
+          <h3 class='fw-bolder text-end me-2'><%= movie.rating %></h3>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= link_to root_path do  %>
+      <%= image_tag("https://res.cloudinary.com/rent-an-instrument/image/upload/v1640900738/dark_round_button_sjfwws.png", class: "movie--button my-6") %>
+  <% end %>
+</div>

@@ -1,0 +1,25 @@
+<div class="movie--container_show">
+  <div class="container-fluid d-flex justify-content-center align-items-start p-0 my-3">
+
+    <img src=<%= @movie.poster_url %> alt="" class="movie--image_movie_show">
+
+    <div class="movie_show--info py-1 px-6">
+      <h1 class="fw-bold display-4 lh-1 mt-7">
+        <%= @movie.title %>
+      </h1>
+      <p class="fw-light my-5">
+        <%= @movie.tagline %>
+      </p>
+      <p class="lh-lg">
+        <%= @movie.overview  %>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="container p-3">
+   <%= link_to movies_path do  %>
+    <%= image_tag("https://res.cloudinary.com/rent-an-instrument/image/upload/v1640900738/dark_round_button_sjfwws.png", class: "movie--show-btn my-6") %>
+   <% end %>
+</div>

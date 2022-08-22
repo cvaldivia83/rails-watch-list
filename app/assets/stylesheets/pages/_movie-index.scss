@@ -1,0 +1,68 @@
+.movie--list {
+  position: relative;
+}
+
+.grey--blob {
+  position: absolute;
+  width: 55%;
+  z-index: -5;
+  left: -25px;
+  top: -30px;
+}
+
+.yellow--blob_movie_index {
+  position: absolute;
+  z-index: -5;
+  width: 50%;
+  top: 2600px;
+  left: 300px;
+}
+
+.orange--blob_movie_index {
+  position: absolute;
+  z-index: -5;
+  width: 30%;
+  top: 3200px;
+  left: -29px;
+}
+
+.movie--card {
+  width: 192px;
+  border-radius: 4px;
+}
+
+.movie--img {
+  width: 190px;
+  height: 220px;
+  background-size: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+.movie--title {
+  font-size: 1rem;
+}
+
+.movie--tagline {
+  font-size: 0.8rem;
+}
+
+.movie--link {
+  text-decoration: none;
+  color: #221E1D;
+}
+
+.movie--link:hover {
+  color: #221E1D;
+}
+
+.gold--blob {
+  width: 70%;
+  position: absolute;
+  z-index: -5;
+  left: 655px;
+  top: 1010px;
+}
+
+.movie--button {
+  width: 5%;
+}
