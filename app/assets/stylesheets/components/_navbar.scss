@@ -1,12 +1,24 @@
 .nav {
   display: flex;
   justify-content: flex-end;
-}
-
-.navbar--blob {
-  width: 40%;
+  position: relative;
+  z-index: -5;
+  &--blob {
+    width: 40%;
+  }
 }
 
 .nav-container {
   padding: 0;
+}
+
+.list--inline {
+  list-style: none;
+  position: absolute;
+  z-index: 5;
+}
+
+.list--item {
+  padding: 0;
+  display: inline-block;
 }
