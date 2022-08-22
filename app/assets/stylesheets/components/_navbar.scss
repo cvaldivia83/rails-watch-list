@@ -12,13 +12,21 @@
   padding: 0;
 }
 
-.list--inline {
+.list-inline {
   list-style: none;
   position: absolute;
   z-index: 5;
+  padding: 1rem 1.2rem;
 }
 
-.list--item {
-  padding: 0;
+.list-item {
   display: inline-block;
+  margin-right: 5rem;
+}
+
+.list-link {
+  text-decoration: none;
+  color: #221E1D;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
