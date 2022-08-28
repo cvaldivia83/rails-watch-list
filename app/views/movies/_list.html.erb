@@ -1,0 +1,16 @@
+<div data-search-movies-target="list" class="movie--cards d-flex flex-wrap justify-content-evenly mt-7">
+  <% movies.each do |element| %>
+  <%= link_to movie_path(element), class: "movie--link" do  %>
+    <div class="card m-1 movie--card">
+      <div class="movie--img" style="background-image: url(<%= element.poster_url %>)"></div>
+      <div class="movie--text ms-2 mt-2 p-1">
+        <h2 class="fw-bold fs-7 movie--title"><%= element.title %></h2>
+        <p class="movie--tagline fw-light mb-1"><%= element.tagline[0..46] %><%= element.tagline.length > 46 ? " ..." : '' %></p>
+      </div>
+      <div class="rating">
+        <h3 class='fw-bolder text-end me-2'><%= element.rating %></h3>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>

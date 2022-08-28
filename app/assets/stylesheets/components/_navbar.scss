@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
-  z-index: -5;
+  z-index: 5;
   &--blob {
     width: 45%;
   }
@@ -29,4 +29,9 @@
   color: #221E1D;
   font-weight: 500;
   font-size: 1.3rem;
+}
+
+.list-link:hover {
+  color: #221E1D;
+
 }
