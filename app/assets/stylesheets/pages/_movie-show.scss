@@ -1,5 +1,5 @@
 .movie--image_movie_show {
-  width: 33%;
+  width: 30%;
 }
 
 .movie--container_show {
@@ -32,12 +32,13 @@
 }
 
 .review-list {
-  box-shadow: 1px 1px 8px rgb(200, 200, 200);
-  border-radius: 4px;
-  text-align: center;
   &-para {
-    font-size: 0.9rem;
+    text-align: center;
+    font-size: 0.85rem;
     margin-bottom: 0;
     padding: 8px;
+    box-shadow: 1px 1px 8px rgb(200, 200, 200);
+    font-weight: 300;
+    margin: 8px;
   }
 }

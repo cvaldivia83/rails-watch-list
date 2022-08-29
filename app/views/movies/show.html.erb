@@ -4,7 +4,7 @@
     <img src=<%= @movie.poster_url %> alt="" class="movie--image_movie_show">
 
     <div class="movie_show--info py-1 px-6">
-      <h1 class="fw-bold display-5 lh-1 mt-7">
+      <h1 class="fw-bold display-6 lh-1 mt-7">
         <%= @movie.title %>
       </h1>
 
@@ -22,21 +22,34 @@
 
 </div>
 
-  <h2 class="text-center review-title mt-5">Write a review</h2>
 
-<div class="container my-6 review-box p-4 w-75">
 
-  <%= simple_form_for ([@movie, @review]) do |f| %>
-    <%= f.input :content, label: "Share your two cents with us:", label_html: { class: 'review-label' }, input_html: { class: 'review-input' } %>
-    <%= f.button :submit, class: 'dark_green-btn' %>
-  <% end %>
+<div class="container" data-controller="insert-in-list">
+
+  <h2 class="text-center review-title my-5">Write a review</h2>
+
+  <div class="my-6 review-box p-4 w-75 mx-auto">
+
+
+    <%= render 'reviews/form', movie: @movie, review: @review %>
+
+  </div>
+
+
+  <div class="w-75 mx-auto" data-insert-in-list-target="items">
+
+    <% if @movie.reviews.blank? %>
+      <p>Be the first to leave a review for <strong><%= @movie.title %></strong></p>
+    <% else %>
+      <% @movie.reviews.each do |review| %>
+        <%= render 'review', review: review %>
+      <% end %>
+    <% end %>
+  </div>
+
 </div>
 
-<div class="container review-list p-1 w-75">
-  <% @movie.reviews.each do |element| %>
-  <p class="review-list-para"><%= element.content %></p>
-  <% end %>
-</div>
+
 
 <div class="container p-3">
    <%= link_to movies_path do  %>

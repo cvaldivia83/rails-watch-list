@@ -4,10 +4,15 @@ class ReviewsController < ApplicationController
     @movie = Movie.find(params[:movie_id])
     @review = Review.new(review_params)
     @review.movie = @movie
-    if @review.save
-      redirect_to movie_path(@movie)
-    else
-      render "movies/show", status: :unprocessable_entity
+
+    respond_to do |format|
+      if @review.save
+        format.html { redirect_to movie_path(@movie) }
+        format.json
+      else
+        format.html { render "movies/show", status: :unprocessable_entity }
+        format.json
+      end
     end
   end
 
