@@ -24,11 +24,17 @@
 
   <h2 class="text-center review-title mt-5">Write a review</h2>
 
-<div class="container my-6 review-box p-6 w-75">
+<div class="container my-6 review-box p-4 w-75">
 
   <%= simple_form_for ([@movie, @review]) do |f| %>
     <%= f.input :content, label: "Share your two cents with us:", label_html: { class: 'review-label' }, input_html: { class: 'review-input' } %>
     <%= f.button :submit, class: 'dark_green-btn' %>
+  <% end %>
+</div>
+
+<div class="container review-list p-1 w-75">
+  <% @movie.reviews.each do |element| %>
+  <p class="review-list-para"><%= element.content %></p>
   <% end %>
 </div>
 
