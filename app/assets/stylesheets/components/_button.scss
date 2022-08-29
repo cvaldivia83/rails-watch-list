@@ -10,3 +10,16 @@
 .orange-btn:hover {
   color: $white;
 }
+
+.dark_green-btn {
+  background-color: #4DBF85;
+  color: #fff;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.dark_green-btn:hover {
+  color: $white;
+  background-color: #3c9668;
+}

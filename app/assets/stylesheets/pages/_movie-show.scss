@@ -1,5 +1,5 @@
 .movie--image_movie_show {
-  width: 35%;
+  width: 30%;
 }
 
 .movie--container_show {
@@ -9,4 +9,36 @@
 
 .movie--show-btn {
   width: 5%;
+}
+
+.review-title {
+  font-size: 1rem;
+  color: #707070;
+}
+
+.review-box {
+  background-color: #DDF7EA;
+  border-radius: 8px;
+}
+
+.review-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.review-input {
+  border: none;
+  border-radius: 8px;
+}
+
+.review-list {
+  &-para {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    padding: 8px;
+    box-shadow: 1px 1px 8px rgb(200, 200, 200);
+    font-weight: 300;
+    margin: 8px;
+  }
 }

@@ -1,0 +1,7 @@
+<%= simple_form_for([movie, review],
+    data: {insert_in_list_target: "form",
+    action: "submit->insert-in-list#send"}) do |f|
+  %>
+  <%= f.input :content, label: "Share your two cents with us:", label_html: { class: 'review-label' }, input_html: { class: 'review-input' } %>
+  <%= f.button :submit, class: 'dark_green-btn' %>
+<% end %>

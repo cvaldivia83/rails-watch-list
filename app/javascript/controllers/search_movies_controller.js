@@ -18,7 +18,6 @@ export default class extends Controller {
     fetch(url, options)
     .then(response => response.text())
     .then((data) => {
-      console.log(data)
       this.listTarget.outerHTML = data;
     })
   }
