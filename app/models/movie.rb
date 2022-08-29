@@ -8,7 +8,7 @@ class Movie < ApplicationRecord
   pg_search_scope :search_movies, against: {
     title: 'A',
     overview: 'B',
-    tagline: 'F'
+    tagline: 'C'
   },
   using: {
     tsearch: { prefix: true }

@@ -1,5 +1,5 @@
 .movie--image_movie_show {
-  width: 35%;
+  width: 33%;
 }
 
 .movie--container_show {
@@ -9,4 +9,24 @@
 
 .movie--show-btn {
   width: 5%;
+}
+
+.review-title {
+  font-size: 1rem;
+  color: #707070;
+}
+
+.review-box {
+  background-color: #DDF7EA;
+  border-radius: 8px;
+}
+
+.review-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.review-input {
+  border: none;
+  border-radius: 8px;
 }

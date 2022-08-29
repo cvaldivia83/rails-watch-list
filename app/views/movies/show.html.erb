@@ -4,7 +4,7 @@
     <img src=<%= @movie.poster_url %> alt="" class="movie--image_movie_show">
 
     <div class="movie_show--info py-1 px-6">
-      <h1 class="fw-bold display-4 lh-1 mt-7">
+      <h1 class="fw-bold display-5 lh-1 mt-7">
         <%= @movie.title %>
       </h1>
 
@@ -20,6 +20,16 @@
     </div>
   </div>
 
+</div>
+
+  <h2 class="text-center review-title mt-5">Write a review</h2>
+
+<div class="container my-6 review-box p-6 w-75">
+
+  <%= simple_form_for ([@movie, @review]) do |f| %>
+    <%= f.input :content, label: "Share your two cents with us:", label_html: { class: 'review-label' }, input_html: { class: 'review-input' } %>
+    <%= f.button :submit, class: 'dark_green-btn' %>
+  <% end %>
 </div>
 
 <div class="container p-3">
